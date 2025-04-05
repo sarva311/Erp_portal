@@ -26,7 +26,9 @@ function tryLogin()
                 }
                 else
                 {
-                    alert(rv['status']);
+                    // alert(rv['status']);
+                    $("#diverror").addClass("applyerrordiv");
+                    $("#errormessage").text(rv['status']);
                 }
             },
             error:function()
