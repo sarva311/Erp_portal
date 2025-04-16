@@ -135,8 +135,8 @@ body{
 
 .diverror
 {
-    background-color: brown;
-    color: #df7f31;
+    background-color: transparent;
+    color: #800000;
     height: 45px;
     width: 85%; 
 
@@ -145,10 +145,23 @@ body{
     align-items: center;
     visibility: hidden;
     opacity: 0;
+    transition: all 0.5s;
+    letter-spacing: 1px;
+
 }
 
 .applyerrordiv
 {
-    visibility: visible;
-    opacity: 1;
+    
+    animation: falldown 2s linear;
+}
+
+@keyframes falldown {
+    0%{opacity: 0;transform: translateY(-100px);}
+    49%{opacity: 1;transform: translateY(0px);letter-spacing: 1px;}
+    50%{opacity: 1;transform: translateY(0px);letter-spacing: 3px;}
+    60%{opacity: 1;transform: translateY(-50px);}
+    80%{opacity: 1;transform: translateY(0px);}
+    85%{opacity: 1;transform: translateY(-10px);}
+    100%{opacity: 1;transform: translateY(0px);}
 }

@@ -15,6 +15,8 @@ function tryLogin()
                 //if you want to do something just
                 //before making the call
                 //alert("about to make an ajax call");
+                $("#diverror").removeClass("applyerrordiv");
+                //$("#errormessage").text("");
             },
             success:function(rv){
                 //if the ajax call was successful,
@@ -42,17 +44,19 @@ function tryLogin()
 $(function(e){
     //capture the keyup event
     $(document).on("keyup","input",function(e){
-       let un=$("#txtUsername").val();
-       let pw=$("#txtPassword").val();
-       if(un.trim()!=="" && pw.trim()!=="")
-       {
+        $("#diverror").removeClass("applyerrordiv");
+        // $("#errormessage").text("");
+        let un=$("#txtUsername").val();
+        let pw=$("#txtPassword").val();
+        if(un.trim()!=="" && pw.trim()!=="")
+        {
            $("#btnLogin").removeClass("inactivecolor");
            $("#btnLogin").addClass("activecolor");
-       }
-       else{
-        $("#btnLogin").removeClass("activecolor");
-        $("#btnLogin").addClass("inactivecolor");
-       }
+        }
+        else{
+         $("#btnLogin").removeClass("activecolor");
+         $("#btnLogin").addClass("inactivecolor");
+        }
     });
     $(document).on("click","#btnLogin",function(e)
     {

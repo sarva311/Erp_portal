@@ -22,7 +22,7 @@
         </div>
 
         <div class="diverror topmarginlarge" id="diverror">
-         <label class="errormessege"id="errormessege">ERROR GOES HERE</label>
+         <label class="errormessage"id="errormessage">ERROR GOES HERE</label>
         </div>
     </div>
     <script src = "js/jquery.js"></script>
